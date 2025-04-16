@@ -99,12 +99,13 @@ docker compose down
 ```
 
 ## Manual Testing
-For manual integration testing, you can simulate image uploads using a test script.
-Two classification images are included in `web-app/tests/test_data/` and two sample training images in `web-app/tests/sample_training_images`
+For manual testing (e.g., verifying classification without using the UI), a helper script is provided.
 
-You can use the `test_upload.py` ssript to sen test images to the app without using the UI:
+Two test images are included in `web-app/tests/test_data/`, along with two sample training images in `web-app/tests/sample_training_images`
+
+You can run the test upload script as follows:
 ```bash
-python -m web-app.tests.test_upload banana
+python -m "web-app.tests.test_upload" banana
 ```
 
 Replace `banana` with one of:
